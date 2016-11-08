@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bengle Tigers of Bangladesh</title>
+	<style type="text/css">
+		body{
+			background-image: url(bdSbn.jpg);
+			background-repeat: no-repeat;
+			background-size:cover;
+		}
+header{
+	    color: #172A19  ;
+	    font-family: 'Cormorant Gramond';
+	    z-index:-1;
+		font-size: 35px;
+		font-weight: 400;
+		line-height: 72px;
+		letter-spacing: 35px;
+		margin-bottom: 57px;
+		text-indent: 24px;
+		text-align: center;
+	    text-transform: uppercase;
+		}
+
+.slide {
+	  max-width: 1000px;
+	  position: relative;
+	  overflow: auto;
+      margin: auto;
+}
+img{
+	height: 500px;
+	width: 1000px;
+	object-position: cover;
+	
+}
+
+
+
+
+.cats{
+     position: relative;
+     top: 50px;
+	 border: 0 solid #C3DBC5;
+	 opacity:.7;
+
+		}
+
+.b-button, .f-button {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 35px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+.f-button {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.b-button:hover, .f-button:hover {
+  background-color: #17202A ;
+}
+
+
+
+		
+	</style>
+
+</head>
+<body>
+
+<header>
+	<h1>Bengal Tiger
+	  <br>
+	     Of 
+      <br>Bangladesh
+    </h1>
+</header>
+
+
+<div class="slide">
+
+<div class="cats">
+	 <img src="bdT1.jpeg" style="width: 100%">
+</div>
+
+<div class="cats">
+   <img src="bdT2.jpeg" style="width: 100%">
+</div>
+
+<<div class="cats">
+   <img src="bdT3.jpeg" style="width: 100%">
+</div>
+
+<div class="cats">
+   <img src="bdT4.jpeg" style="width:100%">
+</div>
+
+<div class="cats">
+   <img src="bdT5.jpeg" style="width: 100%">
+</div>
+
+<div class="cats">
+   <img src="bdT6.jpeg" style="width: 100%">
+</div>
+
+</div>
+
+<a class="b-button" onclick="buttonDivs(-1)">&#10094;</a>
+
+<a class="f-button" onclick="buttonDivs(+1)">&#10095;</a>
+
+</div>
+
+
+<script>
+
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function buttonDivs(n){
+	showDivs(slideIndex += n);
+}
+
+function showDivs(n){
+	var i;
+	var x = document.getElementsByClassName("cats");
+	if (n > x.length) {slideIndex =1}
+    if (n < 1) {slideIndex =x.length}
+
+    	for(i= 0; i< x.length; i++){
+    		x[i].style.display="none";
+    	}
+
+    	x[slideIndex-1].style.display= "block";
+
+      }
+
+
+	
+
+
+</script>
+
+</body>
+</html>
